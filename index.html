@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>動画ページ</title>
+<title>ライフアプリ動画マニュアル</title>
 
 <!-- カウンター -->
 <script src="https://cdn.counter.dev/script.js"
@@ -14,13 +14,14 @@
 <style>
 body {
   margin: 0;
-  background: #fff7e8;
   font-family: system-ui, sans-serif;
+  background: linear-gradient(180deg, #fff7e8 0%, #ffe0a8 100%);
   text-align: center;
+  color: #333;
 }
 
 .wrap {
-  max-width: 430px;
+  max-width: 420px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -29,19 +30,19 @@ body {
   background: #ff8a00;
   color: #fff;
   padding: 14px;
-  border-radius: 16px;
+  border-radius: 18px;
   font-size: 22px;
   font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .video-wrap {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
   aspect-ratio: 9/16;
   background: #000;
-  border-radius: 16px;
+  border-radius: 18px;
   overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,.2);
 }
 
 iframe {
@@ -54,6 +55,33 @@ iframe {
   margin-top: 12px;
   font-size: 14px;
 }
+
+.sub {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #666;
+}
+
+.link {
+  display: block;
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login {
+  background: #fff1d6;
+  color: #9a4b00;
+  border: 2px solid #ffb44a;
+}
+
+.myshop {
+  background: #fff1d6;
+  color: #9a4b00;
+  border: 2px solid #ffb44a;
+}
 </style>
 </head>
 
@@ -61,21 +89,39 @@ iframe {
 
 <div class="wrap">
 
-<div class="title">
-動画タイトルここ
-</div>
+  <div class="title">
+    ライフアプリ かんたん操作動画
+  </div>
 
-<div class="video-wrap">
-  <iframe
-    src="https://drive.google.com/file/d/1xweLNNs6gDXuDDvmexHpQDfiUfDCxeFv/preview"
-    allow="autoplay"
-    allowfullscreen>
-  </iframe>
-</div>
+  <!-- 🎬 ショート（メイン） -->
+  <div class="video-wrap">
+    <iframe
+      src="https://drive.google.com/file/d/1xweLNNs6gDXuDDvmexHpQDfiUfDCxeFv/preview"
+      allow="autoplay"
+      allowfullscreen>
+    </iframe>
+  </div>
 
-<div class="note">
-▶ 再生ボタンを押してください
-</div>
+  <div class="note">
+    ▶ 再生ボタンを押してください
+  </div>
+
+  <!-- 🔽 サブルート -->
+  <div class="sub">
+    上の動画で解決しない方はこちら
+  </div>
+
+  <a class="link login"
+     href="https://drive.google.com/file/d/1icUeIfiAywLxYd1Sic6qZGOvH_kTrE-j/view"
+     target="_blank">
+    ログイン方法を詳しく見る
+  </a>
+
+  <a class="link myshop"
+     href="https://drive.google.com/file/d/1iiyxKggvGwRwZqI0t3ZvrhpT29zVQ_1w/view"
+     target="_blank">
+    マイ店舗の変更・追加を見る
+  </a>
 
 </div>
 
