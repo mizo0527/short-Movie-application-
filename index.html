@@ -86,15 +86,32 @@ h1 {
 
 .video-area {
   display: none;
+  position: fixed;
+  inset: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: #000;
+  z-index: 9999;
 }
 
 .video-area iframe {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.back-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10000;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.9);
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 12px;
 }
 </style>
 </head>
@@ -118,24 +135,33 @@ h1 {
     </button>
 
     <p class="note">
-      大きく見たい場合は、再生後に<br>
-      画面右下の全画面ボタンを押してください。
+      再生ボタンを押してご覧ください。<br>
+      ※端末によって全画面表示できない場合があります。
     </p>
   </div>
 </div>
 
 <div class="video-area" id="videoArea">
+  <button class="back-btn" onclick="backToStart()">← 戻る</button>
+
   <iframe
-  src="https://drive.google.com/file/d/1xweLNNs6gDXuDDvmexHpQDfiUfDCxeFv/preview"
-  allow="autoplay; fullscreen"
-  allowfullscreen>
-</iframe>
+    src="https://drive.google.com/file/d/1xweLNNs6gDXuDDvmexHpQDfiUfDCxeFv/preview"
+    allow="autoplay; fullscreen"
+    allowfullscreen>
+  </iframe>
 </div>
 
 <script>
 function showVideo() {
   document.getElementById("startScreen").style.display = "none";
   document.getElementById("videoArea").style.display = "block";
+  document.body.style.overflow = "hidden";
+}
+
+function backToStart() {
+  document.getElementById("videoArea").style.display = "none";
+  document.getElementById("startScreen").style.display = "block";
+  document.body.style.overflow = "";
 }
 </script>
 
