@@ -8,25 +8,49 @@
 <style>
   body {
     margin: 0;
-    background: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    background: #fff7e8;
+    font-family: system-ui, sans-serif;
+    color: #333;
   }
 
-  .text {
+  .wrap {
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 18px 14px 24px;
+    text-align: center;
+  }
+
+  .title {
+    background: #ff8a00;
     color: #fff;
-    font-size: 20px;
-    font-weight: bold;
+    border-radius: 18px;
+    padding: 14px 12px;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+
+  .lead {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 8px 0 12px;
+  }
+
+  .note {
+    font-size: 13px;
+    color: #666;
     margin-bottom: 12px;
   }
 
   .video-wrap {
-    width: 100%;
-    max-width: 720px;
+    width: 86%;
+    margin: 0 auto;
     aspect-ratio: 9 / 16;
+    background: #000;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,.18);
   }
 
   iframe {
@@ -34,20 +58,58 @@
     height: 100%;
     border: 0;
   }
+
+  .tap {
+    margin-top: 14px;
+    display: inline-block;
+    background: #e95b00;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 10px 18px;
+    border-radius: 999px;
+  }
+
+  .small {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+  }
 </style>
 </head>
 
 <body>
+<div class="wrap">
 
-<div class="text">▶ タップして再生</div>
+  <div class="title">
+    ライフアプリ<br>
+    かんたんスタート動画
+  </div>
 
-<div class="video-wrap">
-  <iframe
-    src="https://drive.google.com/file/d/1xweLNNs6gDXuDDvmexHpQDfiUfDCxeFv/preview"
-    allow="autoplay"
-    allowfullscreen>
-  </iframe>
+  <div class="lead">
+    まずは動画を再生してください
+  </div>
+
+  <div class="note">
+    ダウンロードからマイ店舗登録まで確認できます
+  </div>
+
+  <div class="video-wrap">
+    <iframe
+      src="https://drive.google.com/file/d/1xweLNNs6gDXuDDvmexHpQDfiUfDCxeFv/preview"
+      allow="autoplay"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="tap">
+    ▶ 動画中央の再生ボタンを押してください
+  </div>
+
+  <div class="small">
+    ※通信環境により読み込みに時間がかかる場合があります
+  </div>
+
 </div>
-
 </body>
 </html>
