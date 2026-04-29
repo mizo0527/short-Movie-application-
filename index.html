@@ -4,21 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ライフアプリ ショート動画</title>
+
 <style>
   body {
     margin: 0;
     background: #000;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    height: 100vh;
+  }
+
+  .text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
   }
 
   .video-wrap {
     width: 100%;
     max-width: 720px;
     aspect-ratio: 9 / 16;
-    background: #000;
   }
 
   iframe {
@@ -28,7 +36,10 @@
   }
 </style>
 </head>
+
 <body>
+
+<div class="text">▶ タップして再生</div>
 
 <div class="video-wrap">
   <iframe
