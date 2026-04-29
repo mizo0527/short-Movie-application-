@@ -1,55 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ライフアプリ ショート動画</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ライフアプリ操作ガイド</title>
+
 <style>
-  body {
+body {
     margin: 0;
     background: #000;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    color: #fff;
-    font-family: system-ui, sans-serif;
-  }
-  .message {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 12px 0;
-  }
-  video {
+}
+video {
     width: 100%;
-    max-width: 430px;
-    max-height: 85vh;
+    max-height: 100vh;
     background: #000;
-  }
+}
 </style>
 </head>
+
 <body>
 
-<div class="message">▶ 動画をタップして再生</div>
-
-<video id="movie" controls playsinline preload="metadata">
-  <source src="life_app_short.mp4" type="video/mp4">
+<video id="player" controls preload="metadata" playsinline>
+  <source src="short.mp4" type="video/mp4">
 </video>
 
 <script>
-const video = document.getElementById("movie");
+const video = document.getElementById('player');
 
-video.addEventListener("play", async () => {
-  try {
+// タップ時に全画面
+video.addEventListener('click', () => {
     if (video.requestFullscreen) {
-      await video.requestFullscreen();
+        video.requestFullscreen();
     } else if (video.webkitEnterFullscreen) {
-      video.webkitEnterFullscreen();
+        video.webkitEnterFullscreen();
     }
-  } catch (e) {
-    console.log("Fullscreen failed:", e);
-  }
+});
+
+// 再生開始（通常再生）
+video.addEventListener('play', () => {
+    console.log("再生開始");
+});
+
+// 全画面解除で停止
+document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+        video.pause();
+    }
 });
 </script>
 
