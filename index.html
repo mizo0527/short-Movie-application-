@@ -14,44 +14,21 @@ body {
     align-items: center;
     justify-content: center;
 }
-video {
+iframe {
     width: 100%;
-    max-height: 100vh;
-    background: #000;
+    height: 100%;
+    border: none;
 }
 </style>
 </head>
 
 <body>
 
-<video id="player" controls preload="metadata" playsinline>
-  <source src="ライフアプリショートver.mp4" type="video/mp4">
-</video>
-
-<script>
-const video = document.getElementById('player');
-
-// タップ時に全画面
-video.addEventListener('click', () => {
-    if (video.requestFullscreen) {
-        video.requestFullscreen();
-    } else if (video.webkitEnterFullscreen) {
-        video.webkitEnterFullscreen();
-    }
-});
-
-// 再生開始（通常再生）
-video.addEventListener('play', () => {
-    console.log("再生開始");
-});
-
-// 全画面解除で停止
-document.addEventListener('fullscreenchange', () => {
-    if (!document.fullscreenElement) {
-        video.pause();
-    }
-});
-</script>
+<iframe 
+  src="https://drive.google.com/file/d/1xweLNNs6gDXuDDvmexHpQDfiUfDCxeFv/preview"
+  allow="autoplay"
+  allowfullscreen>
+</iframe>
 
 </body>
 </html>
