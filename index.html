@@ -6,32 +6,31 @@
 <title>ライフアプリ操作ガイド</title>
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   min-height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: linear-gradient(180deg, #fff7e8 0%, #ffe0a8 100%);
-  color: #333;
   display: flex;
+  align-items: center;
   justify-content: center;
+  color: #333;
 }
 
 .wrapper {
   width: 100%;
   max-width: 520px;
-  padding: 18px 14px 24px;
-  text-align: center;
+  padding: 22px;
 }
 
 .card {
   background: #fff;
-  border-radius: 22px;
-  padding: 18px 14px 20px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+  border-radius: 26px;
+  padding: 32px 22px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+  text-align: center;
 }
 
 .badge {
@@ -39,56 +38,48 @@ body {
   background: #ff8a00;
   color: #fff;
   font-weight: bold;
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 999px;
-  font-size: 13px;
-  margin-bottom: 10px;
+  font-size: 14px;
+  margin-bottom: 18px;
 }
 
 h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 30px;
   line-height: 1.35;
-  color: #e66a00;
+  color: #d66a1f;
 }
 
 .lead {
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 12px 0 14px;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 22px 0 28px;
 }
 
-.video-wrap {
-  width: 40%;
-  min-width: 190px;
-  max-width: 240px;
-  aspect-ratio: 9 / 16;
-  margin: 0 auto;
-  background: #000;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-}
-
-iframe {
+.play-link {
+  display: block;
   width: 100%;
-  height: 100%;
-  border: none;
+  text-decoration: none;
+  border-radius: 20px;
+  background: #ff8a00;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 22px 12px;
+  box-shadow: 0 7px 0 #c85f00;
+}
+
+.play-link:active {
+  transform: translateY(4px);
+  box-shadow: 0 3px 0 #c85f00;
 }
 
 .note {
-  margin-top: 12px;
-  font-size: 13px;
-  line-height: 1.6;
-  color: #555;
-  font-weight: bold;
-}
-
-.sub-note {
-  margin-top: 8px;
-  font-size: 12px;
-  line-height: 1.5;
-  color: #777;
+  margin-top: 22px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
 }
 </style>
 </head>
@@ -102,26 +93,21 @@ iframe {
     <h1>ライフアプリ<br>かんたん操作ガイド</h1>
 
     <p class="lead">
-      ダウンロードからマイ店舗登録まで<br>
+      ダウンロードから<br>
+      マイ店舗登録までを<br>
       動画で確認できます。
     </p>
 
-    <div class="video-wrap">
-      <iframe
-        src="https://drive.google.com/file/d/1xweLNNs6gDXuDDvmexHpQDfiUfDCxeFv/preview"
-        allow="autoplay; fullscreen"
-        allowfullscreen>
-      </iframe>
-    </div>
+    <a class="play-link"
+       href="https://drive.google.com/file/d/1xweLNNs6gDXuDDvmexHpQDfiUfDCxeFv/view?usp=sharing"
+       target="_blank">
+      ▶ 動画を見る
+    </a>
 
-    <div class="note">
-      ▶ 動画内の再生ボタンを押してください
-    </div>
-
-    <div class="sub-note">
-      大きく見たい場合は、動画右下の全画面ボタンを押してください。<br>
-      ※端末によって全画面表示できない場合があります。
-    </div>
+    <p class="note">
+      ボタンを押すと動画ページが開きます。<br>
+      再生ボタンを押してご覧ください。
+    </p>
   </div>
 </div>
 
