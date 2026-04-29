@@ -5,124 +5,136 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ライフアプリ動画マニュアル</title>
 
-<!-- カウンター -->
 <script src="https://cdn.counter.dev/script.js"
         data-id="5cf4d8c5-5b3e-49b0-b18b-f738078276dc"
         data-utcoffset="9">
 </script>
 
 <style>
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: linear-gradient(180deg, #fff7e8 0%, #ffe0a8 100%);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #333;
 }
 
-.wrap {
-  max-width: 420px;
-  margin: 0 auto;
-  padding: 20px;
+.wrapper {
+  width: 100%;
+  max-width: 520px;
+  padding: 22px;
 }
 
-.title {
+.card {
+  background: #fff;
+  border-radius: 26px;
+  padding: 30px 22px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
   background: #ff8a00;
   color: #fff;
-  padding: 14px;
-  border-radius: 18px;
-  font-size: 22px;
   font-weight: bold;
-  margin-bottom: 14px;
-}
-
-.video-wrap {
-  width: 100%;
-  aspect-ratio: 9/16;
-  background: #000;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,.2);
-}
-
-iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.note {
-  margin-top: 12px;
+  padding: 7px 16px;
+  border-radius: 999px;
   font-size: 14px;
+  margin-bottom: 18px;
 }
 
-.sub {
-  margin-top: 24px;
-  font-size: 14px;
-  color: #666;
+h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.35;
+  color: #d66a1f;
+}
+
+.lead {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 18px 0 24px;
 }
 
 .link {
   display: block;
-  margin-top: 12px;
-  padding: 14px;
-  border-radius: 16px;
+  width: 100%;
   text-decoration: none;
+  border-radius: 20px;
+  font-size: 20px;
   font-weight: bold;
+  padding: 18px 12px;
+  margin-top: 14px;
 }
 
-.login {
+.main {
+  background: #ff8a00;
+  color: #fff;
+  box-shadow: 0 6px 0 #c85f00;
+}
+
+.sub {
   background: #fff1d6;
   color: #9a4b00;
   border: 2px solid #ffb44a;
 }
 
-.myshop {
-  background: #fff1d6;
-  color: #9a4b00;
-  border: 2px solid #ffb44a;
+.link:active {
+  transform: translateY(3px);
+}
+
+.note {
+  margin-top: 22px;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.7;
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrap">
+<div class="wrapper">
+  <div class="card">
 
-  <div class="title">
-    ライフアプリ かんたん操作動画
+    <div class="badge">動画でかんたん確認</div>
+
+    <h1>ライフアプリ<br>動画マニュアル</h1>
+
+    <p class="lead">
+      見たい内容を選んでください。<br>
+      ボタンを押すと動画ページが開きます。
+    </p>
+
+    <a class="link main"
+       href="https://drive.google.com/file/d/1xweLNNs6gDXuDDvmexHpQDfiUfDCxeFv/view"
+       target="_blank">
+      ▶ まずはこちら
+    </a>
+
+    <a class="link sub"
+       href="https://drive.google.com/file/d/1icUeIfiAywLxYd1Sic6qZGOvH_kTrE-j/view"
+       target="_blank">
+      ログイン方法を詳しく見る
+    </a>
+
+    <a class="link sub"
+       href="https://drive.google.com/file/d/1iiyxKggvGwRwZqI0t3ZvrhpT29zVQ_1w/view"
+       target="_blank">
+      マイ店舗の変更・追加を見る
+    </a>
+
+    <p class="note">
+      ※通信環境により、動画の読み込みに時間がかかる場合があります。
+    </p>
+
   </div>
-
-  <!-- 🎬 ショート（メイン） -->
-  <div class="video-wrap">
-    <iframe
-      src="https://drive.google.com/file/d/1xweLNNs6gDXuDDvmexHpQDfiUfDCxeFv/preview"
-      allow="autoplay"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <div class="note">
-    ▶ 再生ボタンを押してください
-  </div>
-
-  <!-- 🔽 サブルート -->
-  <div class="sub">
-    上の動画で解決しない方はこちら
-  </div>
-
-  <a class="link login"
-     href="https://drive.google.com/file/d/1icUeIfiAywLxYd1Sic6qZGOvH_kTrE-j/view"
-     target="_blank">
-    ログイン方法を詳しく見る
-  </a>
-
-  <a class="link myshop"
-     href="https://drive.google.com/file/d/1iiyxKggvGwRwZqI0t3ZvrhpT29zVQ_1w/view"
-     target="_blank">
-    マイ店舗の変更・追加を見る
-  </a>
-
 </div>
 
 </body>
