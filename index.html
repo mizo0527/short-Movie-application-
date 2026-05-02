@@ -3,12 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ライフアプリ動画マニュアル</title>
-
-<script src="https://cdn.counter.dev/script.js"
-        data-id="5cf4d8c5-5b3e-49b0-b18b-f738078276dc"
-        data-utcoffset="9">
-</script>
+<title>ライフアプリ かんたんスタート</title>
 
 <style>
 * { box-sizing: border-box; }
@@ -18,107 +13,197 @@ body {
   min-height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: linear-gradient(180deg, #fff7e8 0%, #ffe0a8 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #333;
 }
 
 .wrapper {
   width: 100%;
   max-width: 520px;
-  padding: 22px;
+  margin: 0 auto;
+  padding: 22px 18px 34px;
 }
 
 .card {
   background: #fff;
-  border-radius: 26px;
-  padding: 30px 22px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.15);
-  text-align: center;
-}
-
-.badge {
-  display: inline-block;
-  background: #ff8a00;
-  color: #fff;
-  font-weight: bold;
-  padding: 7px 16px;
-  border-radius: 999px;
-  font-size: 14px;
-  margin-bottom: 18px;
+  border-radius: 24px;
+  padding: 22px 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
 }
 
 h1 {
-  margin: 0;
-  font-size: 30px;
-  line-height: 1.35;
-  color: #d66a1f;
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: 24px;
+  color: #e66a00;
 }
 
 .lead {
-  font-size: 16px;
-  line-height: 1.7;
-  margin: 18px 0 24px;
+  text-align: center;
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
-/* ▼ キャラ＋メイン導線 */
-.main-wrap {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 18px;
+.character-area {
+  text-align: center;
+  margin: 8px 0 18px;
 }
 
 .character {
-  width: 80px;
-  animation: float 2s ease-in-out infinite;
+  width: 120px;
+  max-width: 36%;
+  animation: float 2.2s ease-in-out infinite;
+}
+
+.speech {
+  position: relative;
+  display: inline-block;
+  background: #fff7df;
+  border: 2px solid #f39800;
+  border-radius: 18px;
+  padding: 10px 14px;
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #7a3d00;
 }
 
 @keyframes float {
-  0%,100% { transform: translateY(0); }
+  0% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
 }
 
-.link {
-  display: block;
-  text-decoration: none;
+.menu-box {
+  border: 2px solid #ffd08a;
   border-radius: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 18px 12px;
-  text-align: center;
-}
-
-.main {
-  background: #ff8a00;
-  color: #fff;
-  box-shadow: 0 6px 0 #c85f00;
-  flex: 1;
-}
-
-.sub {
-  background: #fff1d6;
-  color: #9a4b00;
-  border: 2px solid #ffb44a;
+  padding: 14px;
+  background: #fffaf0;
   margin-top: 14px;
 }
 
-.link:active {
-  transform: translateY(3px);
+.menu-title {
+  text-align: center;
+  font-weight: 800;
+  color: #d85f00;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
-.char-text {
-  font-size: 13px;
-  margin-top: 6px;
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  padding: 14px 14px;
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: left;
 }
 
-.note {
-  margin-top: 22px;
-  font-size: 13px;
+.btn small {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.95;
+  margin-top: 3px;
+}
+
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.16);
+}
+
+.btn-a { background: #f39800; }
+.btn-b { background: #2f8de4; }
+.btn-c { background: #35a853; }
+.btn-sub { background: #7d7d7d; }
+
+.play-mark {
+  font-size: 22px;
+  margin-left: 8px;
+}
+
+.sub-box {
+  margin-top: 18px;
+  padding-top: 10px;
+  border-top: 2px dashed #ffd08a;
+}
+
+.sub-title {
+  text-align: center;
+  font-weight: 800;
   color: #666;
-  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+/* モーダル */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 430px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 14px;
+  position: relative;
+}
+
+.close-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #333;
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+video {
+  width: 100%;
+  max-height: 72vh;
+  border-radius: 14px;
+  background: #000;
+  display: none;
+}
+
+.next-guide {
+  display: none;
+  text-align: center;
+  margin-top: 12px;
+  background: #fff7df;
+  border-radius: 14px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7a3d00;
+}
+
+.next-guide button {
+  margin-top: 8px;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: #f39800;
+  color: #fff;
+  font-weight: 800;
 }
 </style>
 </head>
@@ -127,50 +212,121 @@ h1 {
 
 <div class="wrapper">
   <div class="card">
+    <h1>ライフアプリ<br>かんたんスタート</h1>
+    <p class="lead">あなたの状況に合わせて、見たい動画を選んでください。</p>
 
-    <div class="badge">動画でかんたん確認</div>
-
-    <h1>ライフアプリ<br>動画マニュアル</h1>
-
-    <p class="lead">
-      見たい内容を選んでください。<br>
-      ボタンを押すと動画が開きます。
-    </p>
-
-    <!-- ▼ メイン導線 -->
-    <div class="main-wrap">
-      <img src="IMG_5790.png" class="character">
-
-      <a class="link main"
-         href="https://drive.google.com/file/d/1xweLNNs6gDXuDDvmexHpQDfiUfDCxeFv/view"
-         target="_blank">
-        ▶ まずはこちら
-      </a>
+    <div class="character-area">
+      <img src="character.png" alt="案内キャラクター" class="character">
+      <div class="speech">どれから始める？かんたんだよ♪</div>
     </div>
 
-    <div class="char-text">
-      👉 はじめての方はここから！
+    <div class="menu-box">
+      <div class="menu-title">かんたんスタートメニュー</div>
+
+      <button class="btn btn-a" onclick="openVideo('videoA')">
+        <span>ダウンロード編（前編）<small>アプリをまだ入れていない方はこちら</small></span>
+        <span class="play-mark">▶</span>
+      </button>
+
+      <button class="btn btn-b" onclick="openVideo('videoB')">
+        <span>ログイン編（中編）<small>LCカード・LaCuCaカードをお持ちの方</small></span>
+        <span class="play-mark">▶</span>
+      </button>
+
+      <button class="btn btn-c" onclick="openVideo('videoC')">
+        <span>マイ店舗登録（後編）<small>よく行く店舗を登録したい方</small></span>
+        <span class="play-mark">▶</span>
+      </button>
+
+      <div class="sub-box">
+        <div class="sub-title">その他の操作</div>
+
+        <button class="btn btn-sub" onclick="openVideo('videoD')">
+          <span>モバイルLaCuCaの方はこちら<small>モバイルLaCuCaでログインする方</small></span>
+          <span class="play-mark">▶</span>
+        </button>
+
+        <button class="btn btn-sub" onclick="openVideo('videoE')">
+          <span>マイ店舗追加・変更の方はこちら<small>登録店舗を追加・変更したい方</small></span>
+          <span class="play-mark">▶</span>
+        </button>
+      </div>
     </div>
-
-    <!-- ▼ サブ導線 -->
-    <a class="link sub"
-       href="https://drive.google.com/file/d/1icUeIfiAywLxYd1Sic6qZGOvH_kTrE-j/view"
-       target="_blank">
-      モバイルLaCuCa ログインは　こちら
-    </a>
-
-    <a class="link sub"
-       href="https://drive.google.com/file/d/1iiyxKggvGwRwZqI0t3ZvrhpT29zVQ_1w/view"
-       target="_blank">
-      マイ店舗の変更・追加を見る
-    </a>
-
-    <p class="note">
-      ※通信環境により、動画の読み込みに時間がかかる場合があります。
-    </p>
-
   </div>
 </div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <video id="videoA" controls playsinline onended="showNext('videoB','次はログイン編へ進みますか？')">
+      <source src="download.mp4" type="video/mp4">
+    </video>
+
+    <video id="videoB" controls playsinline onended="showNext('videoC','次はマイ店舗登録編へ進みますか？')">
+      <source src="login.mp4" type="video/mp4">
+    </video>
+
+    <video id="videoC" controls playsinline onended="showNext(null,'これで基本設定は完了です♪')">
+      <source src="mystore.mp4" type="video/mp4">
+    </video>
+
+    <video id="videoD" controls playsinline onended="showNext(null,'操作は以上です♪')">
+      <source src="mobile-lacuca.mp4" type="video/mp4">
+    </video>
+
+    <video id="videoE" controls playsinline onended="showNext(null,'操作は以上です♪')">
+      <source src="mystore-change.mp4" type="video/mp4">
+    </video>
+
+    <div id="nextGuide" class="next-guide"></div>
+
+    <button class="close-btn" onclick="closeVideo()">閉じる</button>
+  </div>
+</div>
+
+<script>
+const videoIds = ["videoA", "videoB", "videoC", "videoD", "videoE"];
+
+function openVideo(id) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("nextGuide").style.display = "none";
+  document.getElementById("nextGuide").innerHTML = "";
+
+  videoIds.forEach(v => {
+    const video = document.getElementById(v);
+    video.pause();
+    video.currentTime = 0;
+    video.style.display = "none";
+  });
+
+  const target = document.getElementById(id);
+  target.style.display = "block";
+  target.play();
+}
+
+function closeVideo() {
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("nextGuide").style.display = "none";
+
+  videoIds.forEach(v => {
+    const video = document.getElementById(v);
+    video.pause();
+  });
+}
+
+function showNext(nextId, message) {
+  const guide = document.getElementById("nextGuide");
+  guide.style.display = "block";
+
+  if (nextId) {
+    guide.innerHTML = `
+      <div>${message}</div>
+      <button onclick="openVideo('${nextId}')">次の動画を見る</button>
+    `;
+  } else {
+    guide.innerHTML = `<div>${message}</div>`;
+  }
+}
+</script>
 
 </body>
 </html>
