@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ライフアプリ かんたんスタート</title>
 
+<script src="https://cdn.counter.dev/script.js"
+        data-id="5cf4d8c5-5b3e-49b0-b18b-f738078276dc"
+        data-utcoffset="9"></script>
+
 <style>
 * { box-sizing: border-box; }
 
@@ -74,79 +78,8 @@ h1 {
   100% { transform: translateY(0); }
 }
 
-.menu-box {
-  border: 2px solid #ffd08a;
-  border-radius: 20px;
-  padding: 14px;
-  background: #fffaf0;
-  margin-top: 14px;
-}
-
-.menu-title {
-  text-align: center;
-  font-weight: 900;
-  color: #d85f00;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-.btn {
-  width: 100%;
-  border: none;
-  border-radius: 16px;
-  padding: 14px 14px;
-  margin: 10px 0;
-  font-size: 16px;
-  font-weight: 900;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 5px 0 rgba(0,0,0,0.16);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-}
-
-.btn small {
-  display: block;
-  font-size: 12px;
-  font-weight: 600;
-  opacity: 0.95;
-  margin-top: 3px;
-  line-height: 1.4;
-}
-
-.btn:active {
-  transform: translateY(3px);
-  box-shadow: 0 2px 0 rgba(0,0,0,0.16);
-}
-
-.btn-a { background: #f39800; }
-.btn-b { background: #2f8de4; }
-.btn-c { background: #35a853; }
-.btn-sub { background: #777; }
-
-.play-mark {
-  font-size: 22px;
-  margin-left: 8px;
-}
-
-.sub-box {
-  margin-top: 18px;
-  padding-top: 10px;
-  border-top: 2px dashed #ffd08a;
-}
-
-.sub-title {
-  text-align: center;
-  font-weight: 900;
-  color: #666;
-  margin-bottom: 8px;
-}
-
-/* ダウンロード導線 */
 .download-box {
-  margin-top: 22px;
+  margin-top: 18px;
   padding: 18px 14px;
   border-radius: 20px;
   background: linear-gradient(180deg, #fff3d8 0%, #ffe3aa 100%);
@@ -207,7 +140,78 @@ h1 {
   font-size: 22px;
 }
 
-/* モーダル */
+.menu-box {
+  border: 2px solid #ffd08a;
+  border-radius: 20px;
+  padding: 14px;
+  background: #fffaf0;
+  margin-top: 18px;
+}
+
+.menu-title {
+  text-align: center;
+  font-weight: 900;
+  color: #d85f00;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  padding: 14px 14px;
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.btn small {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.95;
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.16);
+}
+
+.btn-a { background: #f39800; }
+.btn-b { background: #2f8de4; }
+.btn-c { background: #35a853; }
+.btn-sub { background: #777; }
+
+.play-mark {
+  font-size: 22px;
+  margin-left: 8px;
+}
+
+.sub-box {
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  padding: 14px;
+  background: #fafafa;
+  margin-top: 18px;
+}
+
+.sub-title {
+  text-align: center;
+  font-weight: 900;
+  color: #666;
+  margin-bottom: 8px;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -225,7 +229,6 @@ h1 {
   background: #fff;
   border-radius: 20px;
   padding: 14px;
-  position: relative;
 }
 
 video {
@@ -277,49 +280,17 @@ video {
 <div class="wrapper">
   <div class="card">
     <h1>ライフアプリ<br>かんたんスタート</h1>
-    <p class="lead">あなたの状況に合わせて、見たい動画を選んでください。</p>
+    <p class="lead">アプリのダウンロードや登録方法を、動画でかんたんに確認できます。</p>
 
     <div class="character-area">
       <img src="character.png" alt="案内キャラクター" class="character">
-      <div class="speech">どれから始める？かんたんだよ♪</div>
+      <div class="speech">まずはアプリをダウンロードしてね♪</div>
     </div>
 
-    <div class="menu-box">
-      <div class="menu-title">かんたんスタートメニュー</div>
-
-      <button class="btn btn-a" onclick="openVideo('videoA')">
-        <span>ダウンロード編（前編）<small>アプリをまだ入れていない方はこちら</small></span>
-        <span class="play-mark">▶</span>
-      </button>
-
-      <button class="btn btn-b" onclick="openVideo('videoB')">
-        <span>ログイン編（中編）<small>LCカード・LaCuCaカードをお持ちの方</small></span>
-        <span class="play-mark">▶</span>
-      </button>
-
-      <button class="btn btn-c" onclick="openVideo('videoC')">
-        <span>マイ店舗登録（後編）<small>よく行く店舗を登録したい方</small></span>
-        <span class="play-mark">▶</span>
-      </button>
-
-      <div class="sub-box">
-        <div class="sub-title">その他の操作</div>
-
-        <button class="btn btn-sub" onclick="openVideo('videoD')">
-          <span>モバイルLaCuCaの方はこちら<small>モバイルLaCuCaでログインする方</small></span>
-          <span class="play-mark">▶</span>
-        </button>
-
-        <button class="btn btn-sub" onclick="openVideo('videoE')">
-          <span>マイ店舗追加・変更の方はこちら<small>登録店舗を追加・変更したい方</small></span>
-          <span class="play-mark">▶</span>
-        </button>
-      </div>
-    </div>
-
+    <!-- ① アプリダウンロードリンク -->
     <div class="download-box">
-      <div class="download-badge">アプリ未登録の方</div>
-      <div class="download-title">ダウンロードはこちら</div>
+      <div class="download-badge">はじめての方はこちら</div>
+      <div class="download-title">アプリのダウンロード</div>
       <p class="download-lead">お使いのスマートフォンに合わせて選んでください。</p>
 
       <a class="store-btn apple"
@@ -335,6 +306,41 @@ video {
         <span class="store-icon">▶</span>
         <span>Google Playでダウンロード</span>
       </a>
+    </div>
+
+    <!-- ② カンタンガイド -->
+    <div class="menu-box">
+      <div class="menu-title">カンタンガイド</div>
+
+      <button class="btn btn-a" onclick="openVideo('videoA')">
+        <span>ダウンロード編（前編）<small>アプリをまだ入れていない方はこちら</small></span>
+        <span class="play-mark">▶</span>
+      </button>
+
+      <button class="btn btn-b" onclick="openVideo('videoB')">
+        <span>ログイン編（中編）<small>LCカード・LaCuCaカードをお持ちの方</small></span>
+        <span class="play-mark">▶</span>
+      </button>
+
+      <button class="btn btn-c" onclick="openVideo('videoC')">
+        <span>マイ店舗登録（後編）<small>よく行く店舗を登録したい方</small></span>
+        <span class="play-mark">▶</span>
+      </button>
+    </div>
+
+    <!-- ③ その他操作 -->
+    <div class="sub-box">
+      <div class="sub-title">その他操作</div>
+
+      <button class="btn btn-sub" onclick="openVideo('videoD')">
+        <span>モバイルLaCuCaの方はこちら<small>モバイルLaCuCaでログインする方</small></span>
+        <span class="play-mark">▶</span>
+      </button>
+
+      <button class="btn btn-sub" onclick="openVideo('videoE')">
+        <span>マイ店舗追加・変更の方はこちら<small>登録店舗を追加・変更したい方</small></span>
+        <span class="play-mark">▶</span>
+      </button>
     </div>
 
   </div>
