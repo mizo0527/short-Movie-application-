@@ -34,6 +34,7 @@ h1 {
   margin: 0 0 8px;
   text-align: center;
   font-size: 24px;
+  line-height: 1.35;
   color: #e66a00;
 }
 
@@ -56,14 +57,13 @@ h1 {
 }
 
 .speech {
-  position: relative;
   display: inline-block;
   background: #fff7df;
   border: 2px solid #f39800;
   border-radius: 18px;
   padding: 10px 14px;
   margin-top: 8px;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 14px;
   color: #7a3d00;
 }
@@ -84,7 +84,7 @@ h1 {
 
 .menu-title {
   text-align: center;
-  font-weight: 800;
+  font-weight: 900;
   color: #d85f00;
   margin-bottom: 10px;
   font-size: 18px;
@@ -97,7 +97,7 @@ h1 {
   padding: 14px 14px;
   margin: 10px 0;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 900;
   color: #fff;
   cursor: pointer;
   box-shadow: 0 5px 0 rgba(0,0,0,0.16);
@@ -113,6 +113,7 @@ h1 {
   font-weight: 600;
   opacity: 0.95;
   margin-top: 3px;
+  line-height: 1.4;
 }
 
 .btn:active {
@@ -123,7 +124,7 @@ h1 {
 .btn-a { background: #f39800; }
 .btn-b { background: #2f8de4; }
 .btn-c { background: #35a853; }
-.btn-sub { background: #7d7d7d; }
+.btn-sub { background: #777; }
 
 .play-mark {
   font-size: 22px;
@@ -138,9 +139,72 @@ h1 {
 
 .sub-title {
   text-align: center;
-  font-weight: 800;
+  font-weight: 900;
   color: #666;
   margin-bottom: 8px;
+}
+
+/* ダウンロード導線 */
+.download-box {
+  margin-top: 22px;
+  padding: 18px 14px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fff3d8 0%, #ffe3aa 100%);
+  border: 2px solid #f39800;
+  text-align: center;
+}
+
+.download-badge {
+  display: inline-block;
+  background: #f39800;
+  color: #fff;
+  font-weight: 900;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.download-title {
+  font-size: 18px;
+  font-weight: 900;
+  color: #7a3d00;
+  margin-bottom: 4px;
+}
+
+.download-lead {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+  color: #6b4a20;
+}
+
+.store-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  padding: 14px;
+  margin: 9px 0;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 900;
+  font-size: 16px;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.18);
+}
+
+.store-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.18);
+}
+
+.apple { background: #111; }
+.google { background: #21a957; }
+
+.store-icon {
+  font-size: 22px;
 }
 
 /* モーダル */
@@ -164,18 +228,6 @@ h1 {
   position: relative;
 }
 
-.close-btn {
-  width: 100%;
-  margin-top: 10px;
-  padding: 12px;
-  border: none;
-  border-radius: 12px;
-  background: #333;
-  color: #fff;
-  font-weight: 800;
-  font-size: 15px;
-}
-
 video {
   width: 100%;
   max-height: 72vh;
@@ -192,7 +244,7 @@ video {
   border-radius: 14px;
   padding: 12px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 800;
   color: #7a3d00;
 }
 
@@ -203,7 +255,19 @@ video {
   padding: 10px 14px;
   background: #f39800;
   color: #fff;
-  font-weight: 800;
+  font-weight: 900;
+}
+
+.close-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #333;
+  color: #fff;
+  font-weight: 900;
+  font-size: 15px;
 }
 </style>
 </head>
@@ -252,11 +316,33 @@ video {
         </button>
       </div>
     </div>
+
+    <div class="download-box">
+      <div class="download-badge">アプリ未登録の方</div>
+      <div class="download-title">ダウンロードはこちら</div>
+      <p class="download-lead">お使いのスマートフォンに合わせて選んでください。</p>
+
+      <a class="store-btn apple"
+         href="https://apps.apple.com/jp/app/%E3%83%A9%E3%82%A4%E3%83%95-%E5%85%AC%E5%BC%8F%E3%82%A2%E3%83%97%E3%83%AA/id1427288237"
+         target="_blank" rel="noopener">
+        <span class="store-icon"></span>
+        <span>App Storeでダウンロード</span>
+      </a>
+
+      <a class="store-btn google"
+         href="https://play.google.com/store/apps/details?id=jp.co.lifecorp.android.app&hl=ja&pli=1"
+         target="_blank" rel="noopener">
+        <span class="store-icon">▶</span>
+        <span>Google Playでダウンロード</span>
+      </a>
+    </div>
+
   </div>
 </div>
 
 <div id="modal" class="modal">
   <div class="modal-content">
+
     <video id="videoA" controls playsinline onended="showNext('videoB','次はログイン編へ進みますか？')">
       <source src="download.mp4" type="video/mp4">
     </video>
